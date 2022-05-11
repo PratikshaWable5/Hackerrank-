@@ -1,0 +1,40 @@
+he first line contains integers  and  separated by a space.
+The second line contains  integers, the elements of the array.
+The third and fourth lines contain  integers,  and , respectively.
+
+Output Format
+
+Output a single integer, your total happiness.
+
+Sample Input
+
+3 2
+1 5 3
+3 1
+5 7
+Sample Output
+
+1
+Explanation
+
+You gain  unit of happiness for elements  and  in set . You lose  unit for  in set . The element  in set  does not exist in the array so it is not included in the calculation.
+
+Hence, the total happiness is 2-1=1
+
+
+-----Python code----
+
+n,m = input().split()
+arr = input().split()
+count =0
+count1=0
+A = set(input().split())
+B = set(input().split())
+for i in arr:
+    if i in A:
+        count= count+1
+    if i in B:
+        count1=count1+1
+print(count-count1)
+
+    
